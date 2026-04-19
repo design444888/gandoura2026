@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - Gandoura Mull</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding: 180px 0 60px;
+            text-align: center;
+            background: var(--off-white);
+        }
+
+        .filter-bar {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sort-select {
+            padding: 10px 20px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .product-meta {
+            margin-top: 10px;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .product-sizes {
+            margin-top: 15px;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .size-tag {
+            font-size: 10px;
+            padding: 4px 8px;
+            border: 1px solid #eee;
+            border-radius: 2px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 120px 0 40px;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="nav-left"><i class="fa-solid fa-bars" id="menu-trigger"></i></div>
+                <div class="logo">
+                    <a href="index.html" class="brand-container">
+                        <div class="brand-top">
+                            <span class="brand-main" style="font-size: 28px;">GANDOURA</span>
+                            <span class="brand-suffix" style="font-size: 8px;">.mull</span>
+                        </div>
+                        <div class="brand-subtitle" style="font-size: 6px; letter-spacing: 0.3em; margin-top: 0;">
+                            MOROCCAN FASHION</div>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <div class="nav-actions">
+                        <i class="fa-solid fa-magnifying-glass" id="search-trigger"></i>
+                        <a href="https://wa.me/212656268002" target="_blank" class="nav-whatsapp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="nav-drawer" id="nav-drawer">
+                    <div class="drawer-close" id="drawer-close"><i class="fa-solid fa-xmark"></i></div>
+                    <div class="drawer-section">
+                        <h4 class="drawer-title">COLLECTION HOMME</h4>
+                        <ul class="drawer-links-main">
+                            <li><a href="products.html?category=djellaba">DJELLABA</a></li>
+                            <li><a href="products.html?category=jabador">JABADOR</a></li>
+                            <li><a href="products.html?category=gandoura">GANDOURA</a></li>
+                            <li><a href="products.html">TOUT VOIR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 id="page-title">Toutes nos collections</h1>
+        </div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="filter-bar">
+                <span id="product-count">0 produits</span>
+                <select class="sort-select" id="price-sort">
+                    <option value="default">Trier par</option>
+                    <option value="min-max">Prix : Croissant</option>
+                    <option value="max-min">Prix : Décroissant</option>
+                </select>
+            </div>
+
+            <div class="products-grid" id="products-container">
+                <!-- Data will be injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Support and Footer same as index.html -->
+    <footer style="margin-top: 100px;">
+        <div class="container" style="padding-bottom: 50px; text-align: center;">
+            <div class="footer-logo">
+                <a href="index.html" class="brand-container" style="color: white">
+                    <div class="brand-top">
+                        <span class="brand-main" style="font-size: 22px;">GANDOURA</span>
+                        <span class="brand-suffix" style="font-size: 6px;">.mull</span>
+                    </div>
+                    <div class="brand-subtitle" style="font-size: 5px; letter-spacing: 0.3em;">MOROCCAN FASHION</div>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 GANDOURA MULL by Montajlkik Store – Tous droits réservés
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const products = [
+            { id: 1, name: "Caftan Mariage", price: 1820, category: "Caftan", sizes: ["S", "M", "L", "XL"], img: "caftan_mariage_product_1775403913156.png" },
+            { id: 2, name: "Jabador Mariage", price: 910, category: "Jabador", sizes: ["M", "L", "XL"], img: "jabador_mariage_product_1775403968947.png" },
+            { id: 3, name: "Caftan Bleu Or", price: 1820, category: "Caftan", sizes: ["S", "M", "L"], img: "caftan_mariage_product_1775403913156.png" },
+            { id: 4, name: "Burnous / Selham", price: 580, category: "Accessoires", sizes: ["TU"], img: "jabador_mariage_product_1775403968947.png" },
+            { id: 5, name: "Jabador Malaki", price: 1300, category: "Jabador", sizes: ["L", "XL", "XXL"], img: "jabador_mariage_product_1775403968947.png" },
+            { id: 6, name: "Gandoura Noire", price: 600, category: "Gandoura", sizes: ["S", "M", "L", "XL"], img: "gandoura_category_1775403655726.png" },
+            { id: 7, name: "Gandoura Marron", price: 600, category: "Gandoura", sizes: ["M", "L", "XL"], img: "gandoura_category_1775403655726.png" },
+            { id: 8, name: "Gandoura Blanc / Gris", price: 600, category: "Gandoura", sizes: ["S", "M", "L"], img: "gandoura_category_1775403655726.png" }
+        ];
+
+        function renderProducts(data) {
+            const container = document.getElementById('products-container');
+            container.innerHTML = '';
+            document.getElementById('product-count').textContent = `${data.length} produits`;
+
+            data.forEach(p => {
+                container.innerHTML += `
+                    <div class="product-card">
+                        <div class="product-media">
+                            <img src="${p.img}" alt="${p.name}">
+                            <div class="product-actions">
+                                <a href="https://wa.me/212656268002" target="_blank" class="action-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">${p.category}</div>
+                            <h3 class="product-title">${p.name}</h3>
+                            <p class="product-price">${p.price} dh</p>
+                            <div class="product-sizes">
+                                ${p.sizes.map(s => `<span class="size-tag">${s}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        document.getElementById('price-sort').addEventListener('change', (e) => {
+            let sorted = [...products];
+            if (e.target.value === 'min-max') {
+                sorted.sort((a, b) => a.price - b.price);
+            } else if (e.target.value === 'max-min') {
+                sorted.sort((a, b) => b.price - a.price);
+            }
+            renderProducts(sorted);
+        });
+
+        // Initialize from URL category if exists
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('category');
+        if (cat) {
+            const filtered = products.filter(p => p.category.toLowerCase() === cat.toLowerCase());
+            renderProducts(filtered);
+            document.getElementById('page-title').textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+        } else {
+            renderProducts(products);
+        }
+
+        // Header functionality from script.js logic
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        const menuTrigger = document.getElementById('menu-trigger');
+        const navDrawer = document.getElementById('nav-drawer');
+        const drawerClose = document.getElementById('drawer-close');
+
+        menuTrigger.addEventListener('click', () => {
+            navDrawer.classList.add('active');
+            document.body.classList.add('drawer-active');
+            document.body.style.overflow = 'hidden';
+        });
+        drawerClose.addEventListener('click', () => {
+            navDrawer.classList.remove('active');
+            document.body.classList.remove('drawer-active');
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gandoura Mull - Vente en ligne de Jabador, Gandoura et Djellaba Marocaine. Artisanat de qualité depuis 2009.">
+    <title>Gandoura Mull - Jabador, Gandoura et Djellaba Marocaine</title>
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+
+                <!-- LEFT: Hamburger + Desktop Category Links -->
+
+                <div class="nav-left">
+
+                    <i data-lucide="menu" id="menu-trigger"></i>
+                    <ul class="nav-cat-links">
+                        <li class="has-dropdown">
+                            <a href="#"><span data-i18n="promo">PROMO</span> <i data-lucide="chevron-down"></i></a>
+                            <ul class="desktop-dropdown">
+                                <li><a href="products.html?category=gandoura" data-i18n="promo">Gandoura</a></li>
+                                <li><a href="products.html" data-i18n="pack">Pack</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- CENTER: Logo -->
+                <div class="logo">
+                    <a href="index.html" class="brand-container">
+                        <div class="brand-top">
+                            <span class="brand-main">GANDOURA</span>
+                            <span class="brand-suffix">.mull</span>
+                        </div>
+                        <div class="brand-subtitle">MOROCCAN FASHION</div>
+                    </a>
+                </div>
+
+                <!-- RIGHT: WhatsApp + Language + Search -->
+                <div class="nav-right">
+                    <div class="nav-actions">
+                        <a href="https://wa.me/212656268002" target="_blank" class="btn btn-beige nav-whatsapp-btn">
+                            <i data-lucide="message-circle"></i>
+                            <div class="wa-text" data-i18n="waOrderCombined">
+                                <span>COMMANDER</span>
+                                <span>SUR</span>
+                                <span>WHATSAPP</span>
+                            </div>
+                        </a>
+                        <div class="nav-lang-selector" id="lang-selector">
+                            <span class="nav-lang-btn active" data-lang="fr">FR</span>
+                            <span class="nav-lang-divider">|</span>
+                            <span class="nav-lang-btn" data-lang="ar">AR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Drawer -->
+                <div class="nav-drawer" id="nav-drawer">
+                    <div class="drawer-close" id="drawer-close"><i data-lucide="x"></i></div>
+
+
+
+                    <div class="drawer-section">
+                        <h4 class="drawer-title">PROMO</h4>
+                        <ul class="drawer-links-main">
+                            <li><a href="products.html?category=gandoura">GANDOURA</a></li>
+                            <li><a href="products.html">Pack</a></li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                    <div class="drawer-search">
+                        <input type="text" placeholder="Recherche ...">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-slider-container">
+                <div class="hero-slide active" style="background-image: url('slider/1.png');"></div>
+                <div class="hero-slide" style="background-image: url('slider/2.png');"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 style="opacity: 0.5;" data-i18n="heroTitle">GANDOURA EN LIGNE</h1>
+                    <span class="hero-subtitle" data-i18n="heroSubtitle">Mode Marocaine de qualité</span>
+                    <div class="hero-btns" style="display: none;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+
+
+        <!-- Best Sellers Section -->
+        <section class="section-padding" id="best-sellers">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="qualityCraft">Artisanat de qualité</span>
+                    <h2 class="section-title" data-i18n="bestSellers">Meilleurs Ventes</h2>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge sale">PROMO</span>
+                            <img src="product/1.webp" alt="Gandoura Malakia"
+                                style="filter: grayscale(0.5) brightness(1.2);">
+                            <div class="product-actions">
+                                <div class="action-btn"><i data-lucide="heart"></i></div>
+                                <a href="https://wa.me/212656268002" target="_blank" class="action-btn"><i
+                                        data-lucide="message-circle"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Gandoura Malakia</h3>
+                            <div class="product-rating">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <span>(4.88)</span>
+                            </div>
+                            <p class="product-price"><span class="old-price">170 dh</span> 130 dh</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge sale">PROMO</span>
+                            <img src="product/10.webp" alt="Gandoura" style="filter: grayscale(0.5) brightness(1.2);">
+                            <div class="product-actions">
+                                <div class="action-btn"><i data-lucide="heart"></i></div>
+                                <a href="https://wa.me/212656268002" target="_blank" class="action-btn"><i
+                                        data-lucide="message-circle"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Gandoura</h3>
+                            <div class="product-rating">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <span>(4.88)</span>
+                            </div>
+                            <p class="product-price"><span class="old-price">150 dh</span> 110 dh</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge sale">PROMO</span>
+                            <img src="product/3.webp" alt="Gandoura Malakia"
+                                style="filter: grayscale(0.5) brightness(1.2);">
+                            <div class="product-actions">
+                                <div class="action-btn"><i data-lucide="heart"></i></div>
+                                <a href="https://wa.me/212656268002" target="_blank" class="action-btn"><i
+                                        data-lucide="message-circle"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Gandoura Malakia</h3>
+                            <div class="product-rating">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <span>(4.88)</span>
+                            </div>
+                            <p class="product-price"><span class="old-price">170 dh</span> 130 dh</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Product 4 -->
+
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge sale">PROMO</span>
+                            <img src="product/11.webp" alt="Gandoura" style="filter: grayscale(0.5) brightness(1.2);">
+                            <div class="product-actions">
+                                <div class="action-btn"><i data-lucide="heart"></i></div>
+                                <a href="https://wa.me/212656268002" target="_blank" class="action-btn"><i
+                                        data-lucide="message-circle"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Gandoura</h3>
+                            <div class="product-rating">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <span>(4.88)</span>
+                            </div>
+                            <p class="product-price"><span class="old-price">150 dh</span> 110 dh</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Product 5 -->
+
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge sale">PROMO</span>
+                            <img src="product/7.webp" alt="Gandoura Malakia"
+                                style="filter: grayscale(0.5) brightness(1.2);">
+                            <div class="product-actions">
+                                <div class="action-btn"><i data-lucide="heart"></i></div>
+                                <a href="https://wa.me/212656268002" target="_blank" class="action-btn"><i
+                                        data-lucide="message-circle"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Gandoura Malakia</h3>
+                            <div class="product-rating">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <span>(4.88)</span>
+                            </div>
+                            <p class="product-price"><span class="old-price">170 dh</span> 130 dh</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Product 6 -->
+
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge sale">PROMO</span>
+                            <img src="product/13.webp" alt="Gandoura Blanc Blue Malaki"
+                                style="filter: grayscale(0.5) brightness(1.2);">
+                            <div class="product-actions">
+                                <div class="action-btn"><i data-lucide="heart"></i></div>
+                                <a href="https://wa.me/212656268002" target="_blank" class="action-btn"><i
+                                        data-lucide="message-circle"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Gandoura</h3>
+                            <div class="product-rating">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <span>(4.88)</span>
+                            </div>
+                            <p class="product-price"><span class="old-price">150 dh</span> 110 dh</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support" id="support">
+            <div class="container">
+                <div class="support-grid">
+                    <div class="support-item">
+                        <i data-lucide="message-circle"></i>
+                        <h4 data-i18n="needHelp">Besoin d'aide ?</h4>
+                        <p>Whatsapp: +212 6 56 26 80 02 <br><span data-i18n="availability">Disponibilité 24h/7j</span>
+                        </p>
+                        <a href="https://wa.me/212656268002" target="_blank" class="btn-support"
+                            data-i18n="contactUs">Nous contacter</a>
+                    </div>
+                    <div class="support-item">
+                        <i data-lucide="phone"></i>
+                        <h4 data-i18n="directContact">Contact Direct</h4>
+                        <p>Tél: +212 6 98 85 59 24 <br>E-mail: design.develope.me@gmail.com</p>
+                    </div>
+                    <div class="support-item">
+                        <i data-lucide="truck"></i>
+                        <h4 data-i18n="shipping">Livraison</h4>
+                        <p data-i18n="shippingDesc">Expédition sous 24h/48h <br>Partout dans le monde</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages Section -->
+        <section class="languages">
+            <div class="container">
+                <div class="lang-list">
+                    <a href="#" class="lang-link active">Français</a>
+                    <a href="#" class="lang-link">English</a>
+                    <a href="#" class="lang-link">Nederlands</a>
+                    <a href="#" class="lang-link">Deutsch</a>
+                    <a href="#" class="lang-link">Italiano</a>
+                    <a href="#" class="lang-link">Español</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <a href="index.html" class="brand-container" style="color: white; align-items: flex-start;">
+                            <div class="brand-top">
+                                <span class="brand-main" style="font-size: 24px;">GANDOURA</span>
+                                <span class="brand-suffix" style="font-size: 8px;">.mull</span>
+                            </div>
+                            <div class="brand-subtitle" style="font-size: 6px; letter-spacing: 0.3em; margin-top: 0;">
+                                MOROCCAN FASHION</div>
+                        </a>
+                    </div>
+                    <p data-i18n="footerAbout">Inspirée par la pure tradition de Marrakech, notre boutique vous propose
+                        des tenues marocaines élégantes et modernes, confectionnées avec passion dans nos ateliers au
+                        Maroc.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/montajlik.store/" target="_blank"><i
+                                data-lucide="instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61553286957856" target="_blank"><i
+                                data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="music"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Collection</h4>
+                    <ul>
+                        <li><a href="#">Gandoura</a></li>
+                        <li><a href="#">Jabador</a></li>
+                        <li><a href="#">Djellaba</a></li>
+                        <li><a href="#">Accessoires</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>À Propos</h4>
+                    <ul>
+                        <li><a href="#">Notre histoire</a></li>
+                        <li><a href="#">Mentions Légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">C.G.V</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><a href="#">Echange & Retour</a></li>
+                        <li><a href="#">Délai de livraison</a></li>
+                        <li><a href="#">Moyens de Paiement</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 GANDOURA MULL by <a href="https://www.facebook.com/profile.php?id=61553286957856">Montajlkik
+                    Store</a> – Tous droits réservés
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-close" id="search-close">&times;</div>
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="Rechercher...">
+            </div>
+            <button class="btn btn-primary">Lancer la recherche</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
