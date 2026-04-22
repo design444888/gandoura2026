@@ -1743,4 +1743,9 @@ footer {
 
 [dir="rtl"] .wa-text {
     text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .nav-container {
+    direction: ltr;
 }
