@@ -1584,14 +1584,13 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
+        gap: 8px;
     }
     
     .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
+        flex: 1;
+        display: flex;
+        justify-content: center;
     }
     
     .nav-whatsapp-btn {
