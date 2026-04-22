@@ -432,17 +432,20 @@ header.scrolled .nav-container {
     letter-spacing: 0.1em;
 }
 
-/* Mobile: hide text on WhatsApp btn, hide lang selector */
+/* Mobile: adjust navbar elements */
 @media (max-width: 768px) {
     .wa-text {
         display: none;
     }
     .nav-whatsapp-btn {
-        padding: 5px 8px !important;
+        padding: 6px 10px !important;
         gap: 5px;
     }
     .nav-lang-selector {
-        display: none;
+        padding: 4px 6px;
+    }
+    .nav-actions {
+        gap: 10px;
     }
 }
 
@@ -1578,8 +1581,8 @@ footer {
 
     .nav-container {
         height: 75px;
-        grid-template-columns: auto 1fr auto; /* Adjust to allow logo to center properly */
-        gap: 10px;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 0px;
     }
     
     .nav-whatsapp-btn {
@@ -1712,4 +1715,24 @@ footer {
     .hero {
         padding: 100px 0 60px;
     }
+}
+
+/* RTL Support - Arabic Version Fixes */
+[dir="rtl"] .nav-drawer {
+    left: auto;
+    right: -400px;
+}
+
+[dir="rtl"] .nav-drawer.active {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .drawer-close {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] .wa-text {
+    text-align: right;
 }
