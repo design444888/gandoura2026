@@ -1,22 +1,20 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
-    // Menu Trigger Logic
-    const menuTrigger = document.getElementById('menu-trigger');
-    const navDrawer = document.getElementById('nav-drawer');
-    const drawerClose = document.getElementById('drawer-close');
+document.addEventListener('DOMContentLoaded', () => {
+    // Menu Trigger Logic - Using Event Delegation since Lucide replaces the DOM elements
+    document.addEventListener('click', (e) => {
+        const menuTrigger = e.target.closest('#menu-trigger');
+        const drawerClose = e.target.closest('#drawer-close');
+        const navDrawer = document.getElementById('nav-drawer');
 
-    if (menuTrigger && navDrawer) {
-        menuTrigger.addEventListener('click', () => {
+        if (menuTrigger && navDrawer) {
             navDrawer.classList.add('active');
             document.body.classList.add('drawer-active');
-        });
-    }
-
-    if (drawerClose && navDrawer) {
-        drawerClose.addEventListener('click', () => {
+        }
+        
+        if (drawerClose && navDrawer) {
             navDrawer.classList.remove('active');
             document.body.classList.remove('drawer-active');
-        });
-    }
+        }
+    });
 
     // WhatsApp Interaction Logic for Product Cards
     const waButtons = document.querySelectorAll('.action-btn a[href*="wa.me"]');
